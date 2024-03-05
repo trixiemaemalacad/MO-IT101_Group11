@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Employee {
-    private static final String CSV_FILE_PATH = "C:\\Users\\njnjs\\IdeaProjects\\MotorPH\\src\\MotorPH Employee Data - Employee Details.csv";
+    private static final String CSV_FILE_PATH = "src/MotorPH Employee Data - Employee Details.csv";
     private static final Map<Integer, String[]> employeeData = new HashMap<>();
 
     public static void main(String[] args) throws IOException {
