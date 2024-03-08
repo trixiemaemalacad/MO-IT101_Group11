@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class GrossWageWeekly {
 
     private static final String EMPLOYEE_CSV_FILE = "src/MotorPH Employee Data - Employee Details.csv";
-    private static final String ATTENDANCE_CSV_FILE = "src/Attendance Data (edited).csv";
+    private static final String ATTENDANCE_CSV_FILE = "src/MotorPH Employee Data - Attendance Record.csv";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
