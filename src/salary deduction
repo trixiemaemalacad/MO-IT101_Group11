@@ -1,0 +1,45 @@
+def generate_payslip(employee_data):
+    # Extracting employee information
+    employee_name = employee_data['name']
+    employee_id = employee_data['id']
+    salary = employee_data['salary']
+    hours_worked = employee_data['hours_worked']
+    rate_per_hour = employee_data['rate_per_hour']
+    deductions = employee_data.get('deductions', 0)
+
+    # Calculating gross pay
+    gross_pay = salary if salary else hours_worked * rate_per_hour
+
+    # Calculating net pay
+    net_pay = gross_pay - deductions
+
+    # Generating payslip
+    payslip = f"""
+    ========================
+    Employee Payslip
+    ========================
+    Name: {employee_name}
+    Employee ID: {employee_id}
+    ------------------------
+    Gross Pay: ${gross_pay:.2f}
+    Deductions: ${deductions:.2f}
+    ------------------------
+    Net Pay: ${net_pay:.2f}
+    ========================
+    """
+
+    return payslip
+
+# Example employee data
+employee_data = {
+    'name': 'John Doe',
+    'id': '123456',
+    'salary': None,  # If salary is None, it will calculate based on hours_worked and rate_per_hour
+    'hours_worked': 40,
+    'rate_per_hour': 20,
+    'deductions': 100  # Optional, if there are any deductions
+}
+
+# Generating payslip for the employee
+payslip = generate_payslip(employee_data)
+print(payslip)
